@@ -1,0 +1,49 @@
+body{
+	text-align:center;
+	background-image:url("../image/background.jpg");
+	background-repeat:no-repeat;
+	background-size:50% auto;
+	background-position:-10px 0px;
+	
+}
+
+#panda{
+	height:100px;
+	width:100px;
+}
+
+#puzzle{
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	height:360px;
+	width:360px;
+}
+
+.part{
+	position:absolute;
+	height:88px;
+	width:88px;
+	border:1px white solid;
+}
+
+.part:hover{
+	border-style:outset;
+}
+
+#start{
+	width:70px;
+	height:30px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:rgb(75, 132, 238);
+	color:white;
+	border:1px outset black;
+	cursor:pointer;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+#music{
+	display:none;
+}
+
