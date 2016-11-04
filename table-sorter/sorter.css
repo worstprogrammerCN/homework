@@ -1,0 +1,17 @@
+body{
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+thead th{
+    background-color: rgb(2, 25, 125);
+    text-align: left;
+    color: white;
+}
+
+.alternate{
+    background-color: rgb(221, 221, 221);
+}
+thead th:hover{
+    background-color: rgb(163, 176, 252);
+    cursor:pointer;
+}
