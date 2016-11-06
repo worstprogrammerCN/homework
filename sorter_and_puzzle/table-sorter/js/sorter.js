@@ -1,4 +1,4 @@
-window.onload = function(){
+$(function(){
     $("thead th, thead td").click(function(){
         this.flag = this.flag == undefined? true : this.flag;
         var index = $(this).index();
@@ -40,4 +40,4 @@ window.onload = function(){
         });
         this.flag = !this.flag;
         });
-};
+});

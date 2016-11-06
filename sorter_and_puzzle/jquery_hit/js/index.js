@@ -4,10 +4,10 @@ function hitThemoles(){
 	var score = 0;
 	var time_left = 0;
 	var gameGoesByTimer;
-	window.onload = function(){
+	$(function(){
 		addSixtyMolesToFlat();
 		startButtonPrepare();
-	};
+	});
 
 	var addSixtyMolesToFlat = function(){
 		var frag = document.createDocumentFragment();
@@ -66,7 +66,8 @@ function hitThemoles(){
 				$(this).attr("class", "molesInHole");
 				aMoleComeOut();
 			}
-			else score--;
+			else if(score > 0)
+				score--;
 			$("#score").val(score);
 		}
 	}
