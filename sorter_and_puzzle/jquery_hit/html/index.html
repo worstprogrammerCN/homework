@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../css/layout.css"/>
+		<script src = "../js/jquery.js"></script>
+		<script src = "../js/loadash.js"></script>
+		<script src = "../js/index.js"></script>
+		
+		
+	</head>
+	
+	<body>
+		<h1>Whac-a-mole</h1>
+		<h2>Test your skill.How many moles can you hit in 30 seconds?</h2>
+		<div id = "menu">
+			<button id = "start">start game/stop game</button>
+			<div>
+				Time:<input disabled = "disabled" value = "0" id = "time" class = "shortBar"></input>
+			</div>
+			<br/>
+			<input disabled = "disabled" value = "game over" id = "status"></input>
+			<div>
+				Score:<input disabled = "disabled" value = "0" id = "score" class = "shortBar"></input>
+			</div>
+		</div>
+		<div id = "flat">
+		</div>
+		
+		<div id = "tips">
+		<p id = "tip_title">Instructions:</p>
+		<ul id = "tip">
+			<li>   1. Click on the radio buttons(moles) as they are selected randomly by the computer.</li>
+			<li>   2. 1 point per hit, minus 1 point per miss.</li>
+		</ul>
+		</div>
+	</body>
+</html>

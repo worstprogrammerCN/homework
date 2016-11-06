@@ -1,0 +1,94 @@
+body{
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+h1, h2{
+	text-align:center;
+	font-weight:100;
+}
+
+h1, h2, #tip, #tip_title{
+	font-family: Century Gothic, Futura, Verdana, sans-serif;
+}
+
+#menu{
+	width:270px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#menu div, #start, #flat div{
+	display:inline-block;
+}
+
+.shortbar, #status{
+	background-color:white;
+	border-style:outset;
+}
+
+.shortbar{
+	width:30px;
+}
+
+#start, #status{
+	width:160px;
+}
+
+#flat{
+	margin-left:auto;
+	margin-right:auto;
+	width:260px;
+	
+	margin-top:30px;
+	
+	border-top-style:solid;
+	border-top-width:1px;
+	border-top-color:rgb(192, 192, 192);
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:rgb(230, 230, 230);
+}
+
+.molesInHole {
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:2px;
+	margin-right:2px;
+	
+	width:20px;
+	height:20px;
+	border:1px outset;
+	border-radius:50%;
+	cursor:pointer;
+}
+
+.moleOutOfHole{
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:2px;
+	margin-right:2px;
+	
+	width:20px;
+	height:20px;
+	border:1px outset;
+	border-radius:50%;
+	cursor:pointer;
+	background-color:rgb(74, 157, 244);
+}
+
+#tips{
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#tip_title{
+	font-size:20px;
+	font-weight:bold;
+}
+
+#tip{
+	list-style:none;
+}
