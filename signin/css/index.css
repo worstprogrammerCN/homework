@@ -5,6 +5,12 @@
 	width: 300px;
 }
 
+.alert p:before{
+	font-family: "FontAwesome";
+	content: "\f071";
+	margin-right: 5px;
+}
+
 .panel-body{
 	background-color: rgb(233, 233, 233);
 }
