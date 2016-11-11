@@ -1,0 +1,23 @@
+
+#signin-panel{
+	margin: 0 auto;
+	overflow: hidden;
+	width: 300px;
+}
+
+.panel-body{
+	background-color: rgb(233, 233, 233);
+}
+
+.input-group{
+	margin-bottom: 5px;
+}
+
+i{
+	width:13px;
+}
+
+button{
+	margin-top: 20px;
+	width:49%;
+}
