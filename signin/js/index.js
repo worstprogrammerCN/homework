@@ -2,7 +2,7 @@ $(function(){
 	var resetButtonPrepare = function(){
 		$("#reset").click(function(){
 			$("input").val("");
-			$(".alert").attr("class", "alert alert-success").html("已重置输入框");
+			$(".alert").attr("class", "alert alert-success").html("<p class='check'>已重置输入框</p>");
 		});
 	}
 
@@ -43,13 +43,13 @@ $(function(){
 			var alert = $(".alert").html("");
 			var error_html = "";
 			if (!username_pass)
-				error_html += "<p><strong>用户名</strong>6~18位英文字母、数字或下划线，必须以英文字母开头</p>";
+				error_html += "<p class='danger'><strong>用户名</strong>6~18位英文字母、数字或下划线，必须以英文字母开头</p>";
 			if (!id_pass)
-				error_html += "<p><strong>学号</strong>8位数字，不能以0开头</p>";
+				error_html += "<p class='danger'><strong>学号</strong>8位数字，不能以0开头</p>";
 			if (!phone_pass)
-				error_html += "<p><strong>电话</strong>11位数字，不能以0开头</p>";
+				error_html += "<p class='danger'><strong>电话</strong>11位数字，不能以0开头</p>";
 			if (!email_pass)
-				error_html += "<p><strong>邮箱</strong>格式不符合规范!</p>";
+				error_html += "<p class='danger'><strong>邮箱</strong>格式不符合规范!</p>";
 			alert.attr("class", "alert alert-danger").html(error_html);
 		}
 	}

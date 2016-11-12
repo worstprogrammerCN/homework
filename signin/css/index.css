@@ -5,6 +5,28 @@
 	width: 350px;
 }
 
+.panel-heading{
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+
+.alert p.info:before{
+    content: url('../image/fa-info-circle.png');
+	vertical-align: -2px;
+}
+
+.alert p.danger:before{
+	content: url('../image/fa-times.png');
+	vertical-align: -2px;
+}
+
+.alert p.check:before{
+	content: url('../image/fa-check.png');
+	vertical-align: -2px;
+}
+
 .panel-body{
 	background-color: rgb(233, 233, 233);
 }
