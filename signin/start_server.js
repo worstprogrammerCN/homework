@@ -15,6 +15,7 @@ http.createServer(function(req, res){
 	var css_re = /^\/css\//;
 	var js_re = /^\/js\//;
 	var font_re = /^\/fonts\//;
+	var img_re = /^\/image\//
 	pathName = url.parse(req.url).pathname;
 	if (css_re.test(req.url) || js_re.test(req.url)){
 		res.writeHead(200,{
@@ -24,11 +25,18 @@ http.createServer(function(req, res){
 		res.end(content);
 	}
 	else if (font_re.test(req.url)){
-		
 		res.writeHead(200,{
 			'Content-Type':"application/x-font-ttf"
 		});
 		var content = fs.readFileSync('./' + pathName, 'binary');
+		res.end(content);
+	}
+
+	else if (img_re.test(req.url)){
+		res.writeHead(200,{
+			'Content-Type':"image/png"
+		});
+		var content = fs.readFileSync('./' + pathName);
 		res.end(content);
 	}
 	
