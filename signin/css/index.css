@@ -2,13 +2,7 @@
 #signin-panel{
 	margin: 0 auto;
 	overflow: hidden;
-	width: 300px;
-}
-
-.alert p:before{
-	font-family: "FontAwesome";
-	content: "\f071";
-	margin-right: 5px;
+	width: 350px;
 }
 
 .panel-body{

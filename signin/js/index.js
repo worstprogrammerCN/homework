@@ -2,17 +2,19 @@ $(function(){
 	var resetButtonPrepare = function(){
 		$("#reset").click(function(){
 			$("input").val("");
-		})
+			$(".alert").attr("class", "alert alert-success").html("已重置输入框");
+		});
 	}
 
 	var uploadButtonPrepare = function(){
 		$("#upload").click(function(){
 			if (allInputAreValid())
-			$("#user-form").submit();
+				$("#user-form").submit();
 			else{
-
+				//do nothing
 			}
-		})
+				
+		});
 	}
 
 	var allInputAreValid = function(){
@@ -51,7 +53,7 @@ $(function(){
 			alert.attr("class", "alert alert-danger").html(error_html);
 		}
 	}
-	
+
 	resetButtonPrepare();
 	uploadButtonPrepare();
 	

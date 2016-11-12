@@ -1,7 +1,6 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
-		<link rel="stylesheet" href="../css/font-awesome.min.css">
 		<link rel="stylesheet" href="../css/index.css">
 	</head>
 	<body>
@@ -11,22 +10,24 @@
 			</div>
 
 			<div class="panel-body">
-				<div class="alert alert-info">请填写<strong>各信息</strong>后提交 </div>
-				<form class="bs-example bs-example-form" role="form" action="/user_information" method="POST" id="user-form">
+				<div class="alert {{ alert }}">
+					{{ information }}
+				</div>
+				<form class="bs-example bs-example-form" role="form" action="/" method="POST" id="user-form">
 					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+						<span class="input-group-addon"><img src="../image/fa-user.png"></span>
 						<input type="text" class="form-control" placeholder="username" name="username">
 					</div>
 					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-id-card" aria-hidden="true"></i></span>
+						<span class="input-group-addon"></span>
 						<input type="text" class="form-control" placeholder="student ID" name="id">
 					</div>
 					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+						<span class="input-group-addon"></span>
 						<input type="text" class="form-control" placeholder="phone number" name="phone">
 					</div>
 					<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+						<span class="input-group-addon"></span>
 						<input type="text" class="form-control" placeholder="email" name="email">
 					</div>
 

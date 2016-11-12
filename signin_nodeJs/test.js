@@ -46,7 +46,7 @@ var server = function(request,response){
         
       //POST结束输出结果
       request.on("end",function(){
-			console.log(postdata);          //在控制台输出接收的数据
+			console.log("postdata:" + postdata);          //在控制台输出接收的数据
       var params = query.parse(postdata);
       var flag = false;
       var duplicateItems = '';
