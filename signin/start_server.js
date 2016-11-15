@@ -5,6 +5,8 @@ http = require('http');
 fs   = require('fs');
 url  = require('url');
 querystring = require('querystring');
+mime = require('mime');
+
 
 
 // param map : 以username-user的Key-value形式保存用户的信息
@@ -24,16 +26,15 @@ http.createServer(function(req, res){
 	var get_re = /^\/(\?username=)?\w*/;
 	pathName = url.parse(req.url).pathname;
 	if (css_re.test(req.url) || js_re.test(req.url)){
-
-		res.writeHead(200,{
-			'Content-Type':"text/css; charset=utf-8"
-		});
 		var content = fs.readFileSync('./' + pathName, 'utf-8');
+		res.writeHead(200,{
+			'Content-Type':console.log(mime.lookup(pathName))
+		});
 		res.end(content);
 	}
 	else if (font_re.test(req.url)){
 		res.writeHead(200,{
-			'Content-Type':"application/x-font-ttf"
+			'Content-Type':console.log(mime.lookup(pathName))
 		});
 		var content = fs.readFileSync('./' + pathName, 'binary');
 		res.end(content);
@@ -100,7 +101,7 @@ function getWithoutUsername(req, res){
 	//进入注册界面
 	var content = fs.readFileSync('html/index.html', 'utf-8');
 	content = content.replace('{{ alert }}', 'alert-info');
-	content = content.replace('{{ information }}', '<p class="info">请填写<strong>用户名</strong>各项信息</p>');
+	content = content.replace('{{ information }}', '<i class="fa fa-address-book-o" aria-hidden="true"></i><p class="info">请填写<strong>用户名</strong>各项信息</p>');
 	res.end(content);
 }
 
