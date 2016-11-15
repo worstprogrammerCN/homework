@@ -25,29 +25,13 @@ http.createServer(function(req, res){
 	var img_re = /^\/image\//;
 	var get_re = /^\/(\?username=)?\w*/;
 	pathName = url.parse(req.url).pathname;
-	if (css_re.test(req.url) || js_re.test(req.url)){
-		var content = fs.readFileSync('./' + pathName, 'utf-8');
-		res.writeHead(200,{
-			'Content-Type':console.log(mime.lookup(pathName))
-		});
-		res.end(content);
-	}
-	else if (font_re.test(req.url)){
-		res.writeHead(200,{
-			'Content-Type':console.log(mime.lookup(pathName))
-		});
-		var content = fs.readFileSync('./' + pathName, 'binary');
-		res.end(content);
-	}
-
-	else if (img_re.test(req.url)){
-		res.writeHead(200,{
-			'Content-Type':"image/png"
-		});
+	if (css_re.test(req.url) || js_re.test(req.url) || font_re.test(req.url) || img_re.test(req.url)){
 		var content = fs.readFileSync('./' + pathName);
+		res.writeHead(200,{
+			'Content-Type':mime.lookup(pathName)
+		});
 		res.end(content);
 	}
-	
 	else if (req.url == "/favicon.ico"){
 		res.end("no favicon");
 		return;
@@ -101,7 +85,7 @@ function getWithoutUsername(req, res){
 	//进入注册界面
 	var content = fs.readFileSync('html/index.html', 'utf-8');
 	content = content.replace('{{ alert }}', 'alert-info');
-	content = content.replace('{{ information }}', '<i class="fa fa-address-book-o" aria-hidden="true"></i><p class="info">请填写<strong>用户名</strong>各项信息</p>');
+	content = content.replace('{{ information }}', '<p class="info">请填写<strong>用户名</strong>各项信息</p>');
 	res.end(content);
 }
 
