@@ -20,7 +20,8 @@ http.createServer(function(req, res){
 	var css_re = /^\/css\//;
 	var js_re = /^\/js\//;
 	var font_re = /^\/fonts\//;
-	var img_re = /^\/image\//
+	var img_re = /^\/image\//;
+	var get_re = /^\/(\?username=)?\w*/;
 	pathName = url.parse(req.url).pathname;
 	if (css_re.test(req.url) || js_re.test(req.url)){
 
@@ -50,7 +51,7 @@ http.createServer(function(req, res){
 		res.end("no favicon");
 		return;
 	}
-	else if (req.url == "/"){
+	else if (get_re.test(req.url)){
 		if (req.method == "GET"){
 			console.log(req.url, req.method);
 			res.writeHead(200,{
@@ -105,7 +106,7 @@ function getWithoutUsername(req, res){
 
 function getWithUsername(req, res, params){
 	//根据是否有该用户执行相应函数
-	console.log(map[params['username']]);
+	console.log("username", map[params['username']]);
 	if (map[params['username']])
 		 getWithUsernameSucceed(req, res, params);
 	else getWithUsernameFail(req, res, params);
@@ -125,6 +126,7 @@ function getWithUsernameSucceed(req, res, params){
 
 function getWithUsernameFail(req, res, params){
 	//返回注册界面
+	console.log("get with username fail");
 	var content = fs.readFileSync('html/index.html', 'utf-8');
 	
 	content = content.replace('{{ alert }}', 'alert-danger');
@@ -135,8 +137,10 @@ function getWithUsernameFail(req, res, params){
 function doPost(req, res, params){
 	//查看参数是否合法，不合法则返回
 	//合法就根据是否有信息重复执行相应函数
-	if (!checkIfValid(params))
+	if (!checkIfValid(params)){
+		res.end("bad user format");
 		return;
+	}
 	for(username in map){
 		var user = map[username];
 		if (user.username == params.username
@@ -199,9 +203,9 @@ function checkIfValid(user){
 	var phone_re = /^[1-9]\d{10}$/;
 	var email_re = /^[a-zA-Z_\-]+@(([a-zA-Z_\-])+\.)+[a-zA-Z]{2,4}$/;
 	if (username_re.test(user.username)
-	 || id_re.test(user.id)
-	 || phone_re.test(user.phone)
-	 || email_re.test(user.email))
-	 	return false;
-	return true;
+	 && id_re.test(user.id)
+	 && phone_re.test(user.phone)
+	 && email_re.test(user.email))
+	 	return true;
+	return false;
 }

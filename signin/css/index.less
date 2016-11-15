@@ -1,0 +1,40 @@
+
+#signin-panel{
+	margin: 0 auto;
+	overflow: hidden;
+	width: 350px;
+  .panel-heading{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .panel-body{
+    background-color: rgb(233, 233, 233);
+    .alert{
+      p.info:before{
+        content: url('../image/fa-info-circle.png');
+        vertical-align: -2px;
+      }
+      p.danger:before{
+        content: url('../image/fa-times.png');
+        vertical-align: -2px;
+      }
+      p.check:before{
+        content: url('../image/fa-check.png');
+        vertical-align: -2px;
+      }
+    }
+    .input-group{
+      margin-bottom: 5px;
+    }
+  }
+  i{
+	  width:13px;
+  }
+  button{
+    margin-top: 20px;
+    width:49%;
+  }
+}
