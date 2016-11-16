@@ -1,0 +1,40 @@
+* {
+  border: black 1px solid;
+}
+#at-plus-container {
+  position: fixed;
+  width: 20%;
+  bottom: 10%;
+  left: 40%;
+}
+#at-plus-container #bottom-positioner {
+  position: relative;
+}
+#at-plus-container #bottom-positioner #button .disabled {
+  color: #7e7e7e;
+}
+#at-plus-container #bottom-positioner #button #info-bar {
+  margin-bottom: 10%;
+}
+#at-plus-container #bottom-positioner #button #info-bar div {
+  background-color: #7e7e7e;
+  border-radius: 50%;
+}
+#at-plus-container #bottom-positioner #button #control-ring-container #control-ring li {
+  list-style-type: none;
+}
+#at-plus-container #bottom-positioner #button #control-ring-container #control-ring .button {
+  background-color: #1e4696;
+}
+#at-plus-container #bottom-positioner #button #control-ring-container #control-ring .unread {
+  background-color: #fa3c3c;
+}
+#at-plus-container #bottom-positioner #button .apb .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1e4696;
+  background-image: url('../images/atplus_green.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
