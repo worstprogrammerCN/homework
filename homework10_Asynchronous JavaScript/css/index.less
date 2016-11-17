@@ -3,6 +3,11 @@
 @red  : rgb(250, 60, 60);
 @light_green : #079E6E;
 
+@transition_fast : 0.2s;
+@delay_fast : 0.2s;
+@delay_middle : 0.5s;
+@delay_slow : 0.8s;
+
 @purple : rgb(150, 155, 210);
 
 #at-plus-container{
@@ -21,15 +26,15 @@
 			bottom:50%;
 			width:100%;
 			#info-bar{
-				transition: all 0.2s;
-				transition-delay:0.2s;
+				transition: all @transition_fast;
+				transition-delay:@delay_middle;
 				position:absolute;
 				left:70px;
 				top:-30px;
 				margin-bottom:10px;
-				> div{
-					transition: all 0.2s;
-					transition-delay:0.2s;
+				> div:first-child{
+					transition: all @transition_fast;
+					transition-delay:@delay_middle;
 					width:0px;
 					height:0px;
 					border-radius: 50%;
@@ -63,8 +68,8 @@
 						background-color: @blue;
 					}
 					.button{
-						transition: all 0.2s;
-						transition-delay:0.2s;
+						transition: all @transition_fast;
+						transition-delay:@delay_middle;
 						position:absolute;
 						left:70px;
 						top:-30px;
@@ -74,7 +79,7 @@
 						opacity: 0;
 						text-align: center;
 						cursor: pointer;
-						> div{
+						> div:first-child{
 							color:@light_green;
 							position: relative;
 							font-family: sans-serif;
@@ -103,8 +108,8 @@
 				left:60px;
 				top:-50px;
 				.icon{
-					transition: all 0.2s;
-					transition-delay:0.5s;
+					transition: all @transition_fast;
+					transition-delay:@delay_slow;
 					width:40px;
 					height:40px;
 					border-radius:50%;
@@ -117,16 +122,16 @@
 			}
 			&:hover{
 				#info-bar{
-					transition: all 0.2s;
-					transition-delay:0.2s;
+					transition: all @transition_fast;
+					transition-delay:@delay_fast;
 					position:absolute;
 					left:10px;
 					top:-220px;
 					margin-bottom:10px;
 					> div{
 						border-radius: 50%;
-						transition: all 0.2s;
-						transition-delay:0.2s;
+						transition: all @transition_fast;
+						transition-delay:@delay_fast;
 						width:150px;
 						height:150px;
 					}
@@ -135,8 +140,8 @@
 					position:absolute;
 					#control-ring{
 						.button{
-							transition:all 0.2s;
-							transition-delay:0.2s;
+							transition:all @transition_fast;
+							transition-delay:@delay_fast;
 							position:absolute;
 							width:37px;
 							height:37px;
@@ -162,13 +167,6 @@
 							top:35px;
 							left:95px;
 						}
-						.unread{
-							position:absolute;
-							top:-5px;
-							right:-12px;
-							width:20px;
-							height:20px;
-						}
 					}
 				}
 				.apb{
@@ -176,8 +174,8 @@
 					left:60px;
 					top:-50px;
 					.icon{
-						transition:all 0.2s;
-						transition-delay:0.2s;
+						transition:all @transition_fast;
+						transition-delay:@delay_fast;
 						width:60px;
 						height:60px;
 						border-radius:50%;
