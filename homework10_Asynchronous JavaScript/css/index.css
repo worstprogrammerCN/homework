@@ -1,6 +1,3 @@
-* {
-  border: black 1px solid;
-}
 #at-plus-container {
   position: fixed;
   width: 40%;
@@ -23,24 +20,30 @@
   color: #7e7e7e;
 }
 #at-plus-container #bottom-positioner #button #info-bar {
+  transition: all 0.2s;
+  transition-delay: 0.2s;
   position: absolute;
-  left: 60px;
-  top: -50px;
+  left: 70px;
+  top: -30px;
   margin-bottom: 10px;
 }
-#at-plus-container #bottom-positioner #button #info-bar div {
+#at-plus-container #bottom-positioner #button #info-bar > div {
+  transition: all 0.2s;
+  transition-delay: 0.2s;
   width: 0px;
   height: 0px;
   border-radius: 50%;
+  overflow: hidden;
   background-color: #7e7e7e;
 }
-#at-plus-container #bottom-positioner #button #info-bar div p {
-  display: block;
+#at-plus-container #bottom-positioner #button #info-bar > div .info-text {
+  position: relative;
+  top: 40px;
   font-family: "san-serif";
   font-size: 50px;
   font-weight: bold;
   text-align: center;
-  color: #27e09d;
+  color: #079E6E;
 }
 #at-plus-container #bottom-positioner #button #control-ring-container {
   position: absolute;
@@ -49,31 +52,25 @@
   list-style-type: none;
 }
 #at-plus-container #bottom-positioner #button #control-ring-container #control-ring .button {
+  transition: all 0.2s;
+  transition-delay: 0.2s;
   position: absolute;
-  width: 37px;
-  height: 37px;
+  left: 70px;
+  top: -30px;
+  width: 0px;
+  height: 0px;
   border-radius: 50%;
   background-color: #1e4696;
+  opacity: 0;
+  text-align: center;
 }
-#at-plus-container #bottom-positioner #button #control-ring-container #control-ring .mask {
-  top: -80px;
-  left: -5px;
-}
-#at-plus-container #bottom-positioner #button #control-ring-container #control-ring .history {
-  top: -33px;
-  left: -17px;
-}
-#at-plus-container #bottom-positioner #button #control-ring-container #control-ring .message {
-  top: 14px;
-  left: 0px;
-}
-#at-plus-container #bottom-positioner #button #control-ring-container #control-ring .setting {
-  top: 40px;
-  left: 40px;
-}
-#at-plus-container #bottom-positioner #button #control-ring-container #control-ring .sign {
-  top: 35px;
-  left: 95px;
+#at-plus-container #bottom-positioner #button #control-ring-container #control-ring .button > div {
+  color: #079E6E;
+  position: relative;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  top: 4px;
 }
 #at-plus-container #bottom-positioner #button #control-ring-container #control-ring .unread {
   position: absolute;
@@ -94,37 +91,42 @@
   top: -50px;
 }
 #at-plus-container #bottom-positioner #button .apb .icon {
-  width: 60px;
-  height: 60px;
+  transition: all 0.2s;
+  transition-delay: 0.5s;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: #1e4696;
-  background-image: url('../images/atplus_green.png');
+  background-color: #969bd2;
+  background-image: url('../images/atplus_white.png');
   background-size: 70% 50%;
   background-repeat: no-repeat;
   background-position: center;
 }
-#at-plus-container #bottom-positioner #button:hover {
-  transition: all 0.2s;
-}
 #at-plus-container #bottom-positioner #button:hover #info-bar {
+  transition: all 0.2s;
+  transition-delay: 0.2s;
   position: absolute;
   left: 10px;
   top: -220px;
   margin-bottom: 10px;
 }
-#at-plus-container #bottom-positioner #button:hover #info-bar div {
+#at-plus-container #bottom-positioner #button:hover #info-bar > div {
+  border-radius: 50%;
+  transition: all 0.2s;
+  transition-delay: 0.2s;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  background-color: #7e7e7e;
 }
 #at-plus-container #bottom-positioner #button:hover #control-ring-container {
   position: absolute;
 }
 #at-plus-container #bottom-positioner #button:hover #control-ring-container #control-ring .button {
+  transition: all 0.2s;
+  transition-delay: 0.2s;
   position: absolute;
   width: 37px;
   height: 37px;
+  opacity: 1;
 }
 #at-plus-container #bottom-positioner #button:hover #control-ring-container #control-ring .mask {
   top: -80px;
@@ -159,6 +161,8 @@
   top: -50px;
 }
 #at-plus-container #bottom-positioner #button:hover .apb .icon {
+  transition: all 0.2s;
+  transition-delay: 0.2s;
   width: 60px;
   height: 60px;
   border-radius: 50%;

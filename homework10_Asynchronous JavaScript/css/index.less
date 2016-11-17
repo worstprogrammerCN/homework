@@ -1,10 +1,10 @@
 @grey : rgb(126, 126, 126);
 @blue : rgb(30, 70, 150);
 @red  : rgb(250, 60, 60);
-@light_green : rgb(39, 224, 157);
-*{
-	border: black 1px solid;
-}
+@light_green : #079E6E;
+
+@purple : rgb(150, 155, 210);
+
 #at-plus-container{
 	position:fixed;
 	width:40%;
@@ -24,18 +24,23 @@
 				color:@grey;
 			}
 			#info-bar{
+				transition: all 0.2s;
+				transition-delay:0.2s;
 				position:absolute;
-				left:60px;
-				top:-50px;
+				left:70px;
+				top:-30px;
 				margin-bottom:10px;
-				div{
+				> div{
+					transition: all 0.2s;
+					transition-delay:0.2s;
 					width:0px;
 					height:0px;
 					border-radius: 50%;
+					overflow:hidden;
 					background-color: @grey;
-
-					p{
-						display: block;
+					.info-text{
+						position:relative;
+						top:40px;
 						font-family: "san-serif";
 						font-size:50px;
 						font-weight: bold;
@@ -51,31 +56,25 @@
 						list-style-type: none;
 					}
 					.button{
+						transition: all 0.2s;
+						transition-delay:0.2s;
 						position:absolute;
-						width:37px;
-						height:37px;
+						left:70px;
+						top:-30px;
+						width:0px;
+						height:0px;
 						border-radius: 50%;
 						background-color: @blue;
-					}
-					.mask{
-						top:-80px;
-						left:-5px;
-					}
-					.history{
-						top:-33px;
-						left:-17px;
-					}
-					.message{
-						top:14px;
-						left:0px;
-					}
-					.setting{
-						top:40px;
-						left:40px;
-					}
-					.sign{
-						top:35px;
-						left:95px;
+						opacity: 0;
+						text-align: center;
+						> div{
+							color:@light_green;
+							position: relative;
+							font-family: sans-serif;
+							font-weight: bold;
+							font-size: 26px;
+							top:4px;
+						}
 					}
 					.unread{
 						position:absolute;
@@ -97,37 +96,44 @@
 				left:60px;
 				top:-50px;
 				.icon{
-					width:60px;
-					height:60px;
+					transition: all 0.2s;
+					transition-delay:0.5s;
+					width:40px;
+					height:40px;
 					border-radius:50%;
-					background-color: @blue;
-					background-image: url('../images/atplus_green.png');
+					background-color: @purple;
+					background-image: url('../images/atplus_white.png');
 					background-size: 70% 50%;
 					background-repeat: no-repeat;
 					background-position: center;
 				}
 			}
 			&:hover{
-				transition: all 0.2s;
 				#info-bar{
+					transition: all 0.2s;
+					transition-delay:0.2s;
 					position:absolute;
 					left:10px;
 					top:-220px;
 					margin-bottom:10px;
-					div{
+					> div{
+						border-radius: 50%;
+						transition: all 0.2s;
+						transition-delay:0.2s;
 						width:150px;
 						height:150px;
-						border-radius: 50%;
-						background-color: @grey;
 					}
 				}
 				#control-ring-container{
 					position:absolute;
 					#control-ring{
 						.button{
+							transition:all 0.2s;
+							transition-delay:0.2s;
 							position:absolute;
 							width:37px;
 							height:37px;
+							opacity:1;
 						}
 						.mask{
 							top:-80px;
@@ -163,6 +169,8 @@
 					left:60px;
 					top:-50px;
 					.icon{
+						transition:all 0.2s;
+						transition-delay:0.2s;
 						width:60px;
 						height:60px;
 						border-radius:50%;
