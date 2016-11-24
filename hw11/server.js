@@ -1,2 +1,9 @@
 var mongojs = require('mongojs')
-var users = db.collection('users');
+var db = mongojs('signin', ['users']);
+
+db.users.find(function (err, docs) {
+    console.log(docs);
+	db.close();
+})
+
+
