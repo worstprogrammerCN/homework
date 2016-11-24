@@ -12,5 +12,9 @@
     "mongodb": "^2.2.11"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "server. data persist in mongodb",
+  "repository": {
+    "type": "git",
+    "url": "hw11"
+  }
 }
