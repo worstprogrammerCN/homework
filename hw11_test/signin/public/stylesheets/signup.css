@@ -1,0 +1,41 @@
+#signup-panel {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 350px;
+}
+#signup-panel .panel-heading {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+#signup-panel .panel-body {
+  background-color: #e9e9e9;
+}
+#signup-panel .panel-body .alert p.info:before {
+  font-family:'FontAwesome';
+  content: '\f05a';
+}
+#signup-panel .panel-body .alert p.danger:before {
+  font-family:'FontAwesome';
+  content: '\f06a';
+}
+#signup-panel .panel-body .alert p.check:before {
+  font-family:'FontAwesome';
+  content: '\f00c';
+}
+
+#signup-panel .panel-body .alert p:before{
+	margin-right:5px;
+}
+
+#signup-panel .panel-body .input-group {
+  margin-bottom: 5px;
+}
+#signup-panel i {
+  width: 13px;
+}
+#signup-panel button {
+  margin-top: 20px;
+  width: 49%;
+}

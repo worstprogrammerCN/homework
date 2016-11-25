@@ -1,0 +1,47 @@
+html
+  head
+    link(rel='stylesheet', 'href' = 'stylesheets/signup.css')
+    link(rel='stylesheet', 'href' = 'stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', 'href' = 'stylesheets/font-awesome.min.css')
+  body
+    .panel.panel-default(id='signup-panel')
+      .panel-heading 登录界面
+      .panel-body
+        if (information)
+          .alert.alert-info
+            p.info #{information}
+        else if (errors)
+          .alert.alert-danger
+            each error in errors
+              p.danger #{error}
+        form.bs-example.bs-example-form#user-form(role='form', action='/signup', method='POST')
+          div.input-group
+            span.input-group-addon
+              i.fa.fa-user-circle(aria-hidden='true')
+            input.form-control(type='text', placeholder='username', name='username')
+          div.input-group
+            span.input-group-addon
+              i.fa.fa-lock(aria-hidden='true')
+            input.form-control(type='text', placeholder='password', name='password')
+          div.input-group
+            span.input-group-addon
+              i.fa.fa-repeat(aria-hidden='true')
+            input.form-control#repeat(type='text', placeholder='repeat your password')
+          div.input-group
+            span.input-group-addon
+              i.fa.fa-id-card(aria-hidden='true')
+            input.form-control(type='text', placeholder='student id', name='id')
+          div.input-group
+            span.input-group-addon
+              i.fa.fa-phone(aria-hidden='true')
+            input.form-control(type='text', placeholder='phone number', name='phone')
+          div.input-group
+            span.input-group-addon
+              i.fa.fa-envelope(aria-hidden='true')
+            input.form-control(type='text', placeholder='email', name='email')
+          button.btn.btn-warning#reset(type='button')  重置
+          button.btn.btn-primary#upload(type='button') 提交
+    script(src='http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/validator.js')
+    script(src='javascripts/signup.js')

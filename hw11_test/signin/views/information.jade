@@ -1,0 +1,26 @@
+html
+	head
+		link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='stylesheets/information.css')
+	body
+		.information-panel
+			.information-head 用户详情
+			.information-body
+				ul
+					li
+						strong 用户名:
+						span #{user.username}
+					li
+						strong 密码:
+						span #{user.id}
+					li
+						strong 学号:
+						span #{user.id}
+					li
+						strong 电话:
+						span #{user.phone}
+					li
+						strong 邮箱:
+						span #{user.email}
+		script(src='http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js')
+		script(src='javascript/bootstrap.min.js')
