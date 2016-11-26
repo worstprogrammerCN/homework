@@ -1,0 +1,31 @@
+html
+  head
+    link(rel='stylesheet', 'href' = 'stylesheets/signin.css')
+    link(rel='stylesheet', 'href' = 'stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', 'href' = 'stylesheets/font-awesome.min.css')
+  body
+    .panel.panel-default(id='signin-panel')
+      .panel-heading 登录界面
+      .panel-body
+        if (information)
+          .alert.alert-info
+            p.info #{information}
+        else if (errors)
+          .alert.alert-danger
+            each error in errors
+              p.danger #{error}
+        form.bs-example.bs-example-form#user-form(role='form', action='/signup', method='POST')
+          div.input-group
+            span.input-group-addon
+              i.fa.fa-user-circle(aria-hidden='true')
+            input.form-control(type='text', placeholder='username', name='username')
+          div.input-group
+            span.input-group-addon
+              i.fa.fa-lock(aria-hidden='true')
+            input.form-control(type='password', placeholder='password', name='password')
+          button.btn.btn-warning#reset(type='button')  重置
+          button.btn.btn-primary#upload(type='button') 登录
+
+    script(src='http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/signin.js')

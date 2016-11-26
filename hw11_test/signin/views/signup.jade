@@ -22,11 +22,11 @@ html
           div.input-group
             span.input-group-addon
               i.fa.fa-lock(aria-hidden='true')
-            input.form-control(type='text', placeholder='password', name='password')
+            input.form-control(type='password', placeholder='password', name='password')
           div.input-group
             span.input-group-addon
               i.fa.fa-repeat(aria-hidden='true')
-            input.form-control#repeat(type='text', placeholder='repeat your password')
+            input.form-control#repeat(type='password', placeholder='repeat your password')
           div.input-group
             span.input-group-addon
               i.fa.fa-id-card(aria-hidden='true')
@@ -41,6 +41,7 @@ html
             input.form-control(type='text', placeholder='email', name='email')
           button.btn.btn-warning#reset(type='button')  重置
           button.btn.btn-primary#upload(type='button') 提交
+
     script(src='http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js')
     script(src='javascripts/bootstrap.min.js')
     script(src='javascripts/validator.js')

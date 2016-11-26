@@ -6,9 +6,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var session = require('express-session');
-var RedisStore = require('connect-redis')(session);
+var FileStore = require('session-file-store')(session);
 
-var index = require('./routes/index');
+var mongojs = require('mongojs')
+var db = mongojs("hw11", ['users']);
+
+var index = require('./routes/index')(db);
 var users = require('./routes/users');
 
 var app = express();
@@ -19,6 +22,12 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(session({
+    store: new FileStore(),
+    resave: false,
+    saveUninitialized: false,
+    secret: 'jinzilihw11'
+}));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

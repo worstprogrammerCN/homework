@@ -1,0 +1,41 @@
+#signin-panel {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 350px;
+}
+#signin-panel .panel-heading {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+#signin-panel .panel-body {
+  background-color: #e9e9e9;
+}
+#signin-panel .panel-body .alert p.info:before {
+  font-family:'FontAwesome';
+  content: '\f05a';
+}
+#signin-panel .panel-body .alert p.danger:before {
+  font-family:'FontAwesome';
+  content: '\f06a';
+}
+#signin-panel .panel-body .alert p.check:before {
+  font-family:'FontAwesome';
+  content: '\f00c';
+}
+
+#signin-panel .panel-body .alert p:before{
+	margin-right:5px;
+}
+
+#signin-panel .panel-body .input-group {
+  margin-bottom: 5px;
+}
+#signin-panel i {
+  width: 13px;
+}
+#signin-panel button {
+  margin-top: 20px;
+  width: 49%;
+}
