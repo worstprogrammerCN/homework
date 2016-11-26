@@ -62,6 +62,7 @@ $(function(){
 	}
 
 	var checkInput = function(){
+		// 检测输入的各信息是否符合规范
 		user = {
 			username : $("input[name='username']").val(),
 			password : $("input[name='password']").val(),

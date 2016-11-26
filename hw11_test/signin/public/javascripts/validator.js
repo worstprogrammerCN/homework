@@ -45,3 +45,6 @@ var validator = {
 		return errors;
 	}
 }
+
+if (typeof module == 'object')
+	module.exports = validator;
